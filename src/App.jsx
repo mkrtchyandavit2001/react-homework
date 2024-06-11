@@ -34,16 +34,20 @@ function App() {
 
   const handleNext = () => {
     setIndex(index + 1)
-    console.log(index)
-    if(index > 6){
-      console.log("barev ERRor");    
+    if(index == 7){
+      setIndex(0)
     }
   }
 
   const handlePrev = () => {
     setIndex(index - 1)
+    if(index == 0){
+      setIndex(7)
+    }
     
   }
+
+  
 
  return <>
     <img id  = "main" src = {photos[index].url }/>
